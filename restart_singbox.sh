@@ -12,4 +12,4 @@ else
 fi
 
 # Thêm cron job nếu chưa tồn tại
-(crontab -l | grep -q "restart_singbox.sh") || (crontab -l; echo "0 */3 * * * /path/to/restart_singbox.sh") | crontab -
+(crontab -l | grep -q "restart_singbox.sh") || (crontab -l; echo "0 */3 * * * $(realpath $0)") | crontab -
