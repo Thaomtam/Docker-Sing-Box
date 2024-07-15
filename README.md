@@ -106,6 +106,10 @@ sudo iptables -A FORWARD -p udp --dport 80 -j ACCEPT
 ```
 sudo iptables -P FORWARD ACCEPT
 ```
+## HOÀN NGUYÊN 
+```
+sudo iptables -P FORWARD DROP
+```
 ## XOÁ frontend
 ```
 sudo kill -9 3188
