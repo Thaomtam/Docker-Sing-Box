@@ -94,3 +94,15 @@ bash -c "$(curl -L https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/mast
 ```
 bash -c "$(curl -L https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcpx.sh)"
 ```
+## Xử lý vấn đề không thể truy cập lưu lượng truy cập trực tiếp của DAE trong một số môi trường mạng nhất định
+```
+sudo iptables -P FORWARD DROP
+sudo iptables -A FORWARD -p tcp --dport 443 -j ACCEPT
+sudo iptables -A FORWARD -p udp --dport 443 -j ACCEPT
+sudo iptables -A FORWARD -p tcp --dport 80 -j ACCEPT
+sudo iptables -A FORWARD -p udp --dport 80 -j ACCEPT
+```
+## HOẶC
+```
+sudo iptables -P FORWARD ACCEPT
+```
