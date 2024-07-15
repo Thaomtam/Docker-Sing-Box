@@ -86,3 +86,11 @@ docker logs -f sing-box
 docker stop sing-box
 docker rm sing-box
 ```
+## Hạt nhân tuỳ chỉnh tcp xoá kernel
+```
+bash -c "$(curl -L https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcp.sh)"
+```
+## Hạt nhân tuỳ chỉnh tcp không xoá kernel
+```
+bash -c "$(curl -L https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcpx.sh)"
+```
