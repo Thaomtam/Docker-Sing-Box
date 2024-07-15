@@ -10,3 +10,6 @@ if [ -n "$CONTAINER_ID" ]; then
 else
     echo "sing-box container is not running."
 fi
+
+# Thêm cron job nếu chưa tồn tại
+(crontab -l | grep -q "restart_singbox.sh") || (crontab -l; echo "0 */3 * * * /path/to/restart_singbox.sh") | crontab -
