@@ -69,7 +69,8 @@ docker run -d \
   -p 80:80 \
   -p 443:443 \
   -p 16557:16557 \
-  --dns 1.1.1.1 \
+  --dns 8.8.8.8 \
+  --dns 8.8.4.4 \
   --name=sing-box \
   --restart=always \
   ghcr.io/sagernet/sing-box \
@@ -79,4 +80,9 @@ docker run -d \
 ## Check logs
 ```
 docker logs -f sing-box
+```
+## Làm mới
+```
+docker stop sing-box
+docker rm sing-box
 ```
