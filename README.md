@@ -1,5 +1,9 @@
 # Docker-Sing-Box
 ***Vườn nhà làm quan tâm thì liên hệ t.me/ktandroidreview thanks ae
+## CẤU HÌNH MÚI GIỜ
+```
+timedatectl set-timezone Asia/Ho_Chi_Minh
+```
 ## CÀI Docker:
 ```
 bash <(curl -sSL https://get.docker.com)
