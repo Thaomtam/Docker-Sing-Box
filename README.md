@@ -68,9 +68,9 @@ docker run -d \
   -v ./config.json:/etc/sing-box/config.json \
   -p 80:80 \
   -p 443:443 \
+  -p 8080:8080 \
   -p 16557:16557 \
-  --dns 8.8.8.8 \
-  --dns 8.8.4.4 \
+  --dns 8.8.8.8 \ 
   --name=sing-box \
   --restart=always \
   ghcr.io/sagernet/sing-box \
