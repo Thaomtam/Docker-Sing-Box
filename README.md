@@ -106,3 +106,10 @@ sudo iptables -A FORWARD -p udp --dport 80 -j ACCEPT
 ```
 sudo iptables -P FORWARD ACCEPT
 ```
+## XOÁ frontend
+```
+sudo kill -9 3188
+sudo rm /var/lib/dpkg/lock-frontend
+sudo rm /var/lib/dpkg/lock
+sudo dpkg --configure -a
+```
