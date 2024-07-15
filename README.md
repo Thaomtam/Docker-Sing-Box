@@ -113,3 +113,7 @@ sudo rm /var/lib/dpkg/lock-frontend
 sudo rm /var/lib/dpkg/lock
 sudo dpkg --configure -a
 ```
+## XỬ LÝ TRÀN BỘ NHỚ
+```
+bash -c "$(curl -L https://raw.githubusercontent.com/Thaomtam/Docker-Sing-Box/main/restart_singbox.sh)"
+```
