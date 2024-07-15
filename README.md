@@ -8,10 +8,6 @@ timedatectl set-timezone Asia/Ho_Chi_Minh
 ```
 bash <(curl -sSL https://get.docker.com)
 ```
-## KÉO
-```
-docker pull ghcr.io/sagernet/sing-box:v1.9.3
-```
 ## config.json
 ```
 {
