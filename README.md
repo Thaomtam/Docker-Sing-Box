@@ -1,5 +1,5 @@
 # Docker-Sing-Box
-***Vườn nhà làm quan tâm thì liên hệ t.me/ktandroidreview thanks ae
+*** TÂM ĐẮC NHẤT TỚI GIỜ [>3<]
 ## CẤU HÌNH MÚI GIỜ
 ```
 timedatectl set-timezone Asia/Ho_Chi_Minh
