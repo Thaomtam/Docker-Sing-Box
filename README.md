@@ -11,11 +11,6 @@ bash <(curl -sSL https://get.docker.com)
 ## config.json
 ```
 {
-  "log": {
-    "disabled": false,
-    "level": "debug",
-    "timestamp": true
-  },
   "inbounds": [
     {
       "type": "vless",
@@ -23,7 +18,7 @@ bash <(curl -sSL https://get.docker.com)
       "listen_port": 80,
       "users": [
         {
-          "uuid": "thoitiet"
+          "uuid": "thời-tiết"
         }
       ],
       "multiplex": {
@@ -31,7 +26,7 @@ bash <(curl -sSL https://get.docker.com)
       },
       "transport": {
         "type": "ws",
-        "path": "/video",
+        "path": "/gists/cache",
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
           "Host": "m.tiktok.com"
@@ -44,22 +39,17 @@ bash <(curl -sSL https://get.docker.com)
       "listen_port": 16557,
       "users": [
         {
-          "Username": "thoitiet",
-          "Password": "thoitiet"
+          "Username": "thời-tiết",
+          "Password": "thời-tiết"
         }
       ]
     }
   ],
   "outbounds": [
-    {
-      "type": "direct",
-      "tag": "direct-out"
-    },
-    {
-      "type": "block",
-      "tag": "block"
-    }
-  ]
+        {
+            "type": "direct"
+        }
+    ]
 }
 ```
 ## KHỞI ĐỘNG 
