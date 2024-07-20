@@ -62,6 +62,7 @@ docker run -d \
   -p 8080:8080 \
   --dns 8.8.8.8 \
   --dns 8.8.4.4 \
+  --env TZ=Asia/Ho_Chi_Minh \
   --name=sing-box \
   --restart=always \
   ghcr.io/sagernet/sing-box \
