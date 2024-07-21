@@ -54,17 +54,14 @@ bash <(curl -sSL https://get.docker.com)
 ```
 ## KHỞI ĐỘNG 
 ```
-docker run -d \
+docker run -itd \
   -v ./config.json:/etc/sing-box/config.json \
-  -p 80:80 \
-  -p 443:443 \
-  -p 16557:16557 \
-  -p 8080:8080 \
+  --network=host \
   --dns 8.8.8.8 \
   --dns 8.8.4.4 \
   --env TZ=Asia/Ho_Chi_Minh \
   --name=sing-box \
-  --restart=always \
+  --restart=unless-stopped \
   ghcr.io/sagernet/sing-box \
   -D /var/lib/sing-box \
   -C /etc/sing-box/ run
