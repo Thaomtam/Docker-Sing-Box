@@ -72,8 +72,8 @@ docker logs -f sing-box
 ```
 ## Làm mới
 ```
-docker stop sing-box
-docker rm sing-box
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
 ```
 ## Hạt nhân tuỳ chỉnh tcp xoá kernel
 ```
