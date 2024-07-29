@@ -16,9 +16,10 @@ bash <(curl -sSL https://get.docker.com)
       "type": "vless",
       "listen": "0.0.0.0",
       "listen_port": 80,
+	    "sniff": true,
       "users": [
         {
-          "uuid": "thời-tiết"
+          "uuid": "thoitiet"
         }
       ],
       "multiplex": {
@@ -39,17 +40,69 @@ bash <(curl -sSL https://get.docker.com)
       "listen_port": 16557,
       "users": [
         {
-          "Username": "thời-tiết",
-          "Password": "thời-tiết"
+          "Username": "thoitiet",
+          "Password": "thoitiet"
         }
       ]
     }
   ],
   "outbounds": [
-        {
-            "type": "direct"
-        }
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "ip_is_private": true,
+        "outbound": "block"
+      },
+      {
+        "rule_set": [
+          "geosite-google"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "Geosite-vn"
+        ],
+        "outbound": "block"
+      },
+      {
+        "outbound": "direct",
+        "network": [
+          "udp","tcp"
+        ]
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "Geosite-vn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Thaomtam/Geosite-vn/rule-set/Geosite-vn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
+        "download_detour": "direct"
+      }
     ]
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  }
 }
 ```
 ## KHỞI ĐỘNG 
