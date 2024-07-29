@@ -2,6 +2,10 @@
 ```
 bash <(curl -fsSL https://sing-box.app/deb-install.sh)
 ```
+# Redhat / RPM
+```
+bash <(curl -fsSL https://sing-box.app/rpm-install.sh)
+```
 # Config
 ```
 {
