@@ -121,7 +121,7 @@ bash <(curl -fsSL https://sing-box.app/deb-install.sh)
   }
 }
 ```
-#Quản lý dịch vụ
+# Quản lý dịch vụ
 * Đối với hệ thống Linux có systemd , thông thường quá trình cài đặt đã bao gồm dịch vụ sing-box, bạn có thể quản lý dịch vụ bằng lệnh sau:
 
 | Operation | Command                                      |
