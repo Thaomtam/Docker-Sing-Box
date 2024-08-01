@@ -163,3 +163,7 @@ sudo dpkg --configure -a
 ```
 bash -c "$(curl -L https://raw.githubusercontent.com/Thaomtam/Docker-Sing-Box/main/restart_singbox.sh)"
 ```
+## Ký ssl
+```
+bash -c "$(curl -L https://raw.githubusercontent.com/Thaomtam/Docker-Sing-Box/main/ssl.sh)" @domain.com
+```
